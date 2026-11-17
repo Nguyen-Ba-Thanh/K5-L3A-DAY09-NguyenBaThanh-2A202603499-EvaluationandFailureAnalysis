@@ -1,0 +1,187 @@
+{
+  "command": "python -m lab9.submission_check",
+  "checks": [
+    {
+      "name": "Required files",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Implemented stats.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Implemented graders.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Implemented evalset.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Implemented gate.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Eval set v1",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Canonical LF v1",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Baseline v1 SHA",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Baseline v1 self-gate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Baseline v1 swarm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Baseline v1 complete",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Eval set v2",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Canonical LF v2",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Baseline v2 SHA",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Baseline v2 self-gate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Baseline v2 swarm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Baseline v2 complete",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Harness eval section",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Core and v2 workflow jobs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Taxonomy >=5 FM",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Attack mapping uses taxonomy ids",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Core fixed accepted",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Core regression blocked on pass_rate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Mutation score 3/3, 0 false alarms",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "All recorded traps blocked",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "A/A zero",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Lab8 unchanged from inherited HEAD",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Provided fixture unchanged: lab9/variants.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Provided fixture unchanged: lab9/variant_agent.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Provided fixture unchanged: lab9/traps.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Provided fixture unchanged: tests/test_lab9_stats.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Provided fixture unchanged: tests/test_lab9_graders.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Provided fixture unchanged: tests/test_lab9_advanced.py",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "local_ready": true,
+  "git": {
+    "head": "643f77bbd54d6f9beb45a7b551976e041d02ced5",
+    "branch": "starter/d09",
+    "origin": "https://github.com/Nguyen-Ba-Thanh/K5-L3A-DAY08-NguyenBaThanh-FromWorkflowsToAgents.git",
+    "uncommitted_changes": true
+  },
+  "lab9_source_sha256": "794aaa209ad497cb2a49bb751f919c96ad62af82dd4171fd8ebd15beb8d8f991",
+  "manual_steps": [
+    "Read and confirm the personal information, AI-use disclosure and audit conclusions.",
+    "Stage the final changes, create a real commit, and record its hash in the PR description.",
+    "Push starter/d09 and open a PR into main of the same personal fork.",
+    "Check hosted eval-gate and eval-gate-v2 are green; paste docs/pr_evidence.md into the PR.",
+    "Submit the PR/repository link via the channel requested by the course before its deadline."
+  ],
+  "hosted_ci": "not_verified",
+  "hidden_grade": "not_available"
+}

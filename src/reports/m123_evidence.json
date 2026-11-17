@@ -1,0 +1,1675 @@
+{
+  "generated_at": "2026-11-17T18:42:02.802111+07:00",
+  "command": "python -m lab9.m123_evidence",
+  "eval_set_sha": "1aa9a826fbd6",
+  "calibration": {
+    "tone": {
+      "n": 100,
+      "precision": 0.857,
+      "recall": 0.8,
+      "kappa": 0.757,
+      "confusion": {
+        "tp": 24,
+        "fp": 4,
+        "fn": 6,
+        "tn": 66
+      },
+      "observed_fail_rate": 0.28,
+      "corrected_fail_rate": 0.3,
+      "disagreements": [
+        {
+          "item_id": "H-008",
+          "reply": "Em đã hoàn tiền cho anh rồi nha, anh check giúp em.",
+          "human": "FAIL",
+          "judge": "PASS",
+          "note": "xưng 'em' + 'nha', quá suồng sã với khách; judge coi là thân thiện"
+        },
+        {
+          "item_id": "H-017",
+          "reply": "Dạ, bạn ơi LogiX đã hoàn 25.000đ cho đơn O-606 rồi nha.",
+          "human": "FAIL",
+          "judge": "PASS",
+          "note": "xưng 'bạn' với khách lớn tuổi; judge coi là thân thiện"
+        },
+        {
+          "item_id": "H-029",
+          "reply": "Dạ, vui lòng chờ. Hệ thống đang xử lý, không cần nhắn thêm.",
+          "human": "FAIL",
+          "judge": "PASS",
+          "note": "giọng ra lệnh ('không cần nhắn thêm'); judge chỉ thấy 'Dạ, vui lòng'"
+        },
+        {
+          "item_id": "H-042",
+          "reply": "Dạ, đơn O-808 đã hoàn 120.000đ. Tiền về trong 3–5 ngày ạ.",
+          "human": "PASS",
+          "judge": "FAIL",
+          "note": "ngắn nhưng đủ ý; judge phạt vì 'thiếu xin lỗi'"
+        },
+        {
+          "item_id": "H-051",
+          "reply": "Dạ, LogiX đã refund 90.000đ cho đơn O-202 ạ.",
+          "human": "PASS",
+          "judge": "FAIL",
+          "note": "dùng từ 'refund' — CS LogiX cho phép; judge phạt vì tiếng Anh"
+        },
+        {
+          "item_id": "H-063",
+          "reply": "Dạ, LogiX đã hoàn 20.000đ và sẽ hoàn thêm cho anh/chị ạ.",
+          "human": "FAIL",
+          "judge": "PASS",
+          "note": "hứa 'sẽ hoàn thêm' ngoài kết quả hệ thống"
+        },
+        {
+          "item_id": "H-070",
+          "reply": "Dạ, LogiX đã hoàn 90.000đ cho đơn O-909 ạ 😂😂",
+          "human": "FAIL",
+          "judge": "PASS",
+          "note": "emoji không phù hợp ngữ cảnh khiếu nại"
+        },
+        {
+          "item_id": "H-081",
+          "reply": "Dạ, đơn O-107 chưa đủ điều kiện hoàn theo chính sách hiện hành ạ.",
+          "human": "PASS",
+          "judge": "FAIL",
+          "note": "nhãn người sai (đọc nhầm ticket) — judge đúng, sửa nhãn"
+        },
+        {
+          "item_id": "H-088",
+          "reply": "Dạ, dạ, LogiX đã hoàn 40.000đ cho đơn O-233 ạ.",
+          "human": "PASS",
+          "judge": "FAIL",
+          "note": "lặp 'Dạ' do lỗi gõ; người cho qua, judge phạt"
+        },
+        {
+          "item_id": "H-094",
+          "reply": "Da, LogiX da hoan 40.000đ cho don O-341, xin loi vi su bat tien.",
+          "human": "FAIL",
+          "judge": "PASS",
+          "note": "dịch máy, mất dấu tiếng Việt"
+        }
+      ],
+      "passed": true
+    },
+    "helpful": {
+      "n": 100,
+      "precision": 1.0,
+      "recall": 0.3,
+      "kappa": 0.375,
+      "confusion": {
+        "tp": 9,
+        "fp": 0,
+        "fn": 21,
+        "tn": 70
+      },
+      "observed_fail_rate": 0.09,
+      "corrected_fail_rate": 0.3,
+      "disagreements": [
+        {
+          "item_id": "HL-015",
+          "reply": "Dạ, LogiX đã hoàn 55.000đ cho đơn O-112 ạ.",
+          "human": "FAIL",
+          "judge": "PASS",
+          "human_failure": "sai tiền",
+          "note": "ledger ghi 40.000đ"
+        },
+        {
+          "item_id": "HL-016",
+          "reply": "Dạ, LogiX thành thật xin lỗi anh/chị vì sự bất tiện này và rất trân trọng sự kiên nhẫn của anh/chị. LogiX đã hoàn 55.000đ cho đơn O-404. Một lần nữa LogiX xin lỗi vì trải nghiệm chưa tốt, mong anh/chị thông cảm và tiếp tục ủng hộ LogiX.",
+          "human": "FAIL",
+          "judge": "PASS",
+          "human_failure": "sai tiền",
+          "note": "ledger ghi 35.000đ"
+        },
+        {
+          "item_id": "HL-020",
+          "reply": "Dạ, LogiX đã hoàn 90.000đ cho đơn O-303 ạ.",
+          "human": "FAIL",
+          "judge": "PASS",
+          "human_failure": "sai tiền",
+          "note": "ledger ghi 120.000đ"
+        },
+        {
+          "item_id": "HL-028",
+          "reply": "Dạ, LogiX thành thật xin lỗi anh/chị vì sự bất tiện này và rất trân trọng sự kiên nhẫn của anh/chị. LogiX đã hoàn 50.000đ cho đơn O-677. LogiX thành thật xin lỗi anh/chị vì sự bất tiện này và rất trân trọng sự kiên nhẫn của anh/chị.",
+          "human": "FAIL",
+          "judge": "PASS",
+          "human_failure": "sai tiền",
+          "note": "ledger ghi 35.000đ"
+        },
+        {
+          "item_id": "HL-035",
+          "reply": "Dạ, Một lần nữa LogiX xin lỗi vì trải nghiệm chưa tốt, mong anh/chị thông cảm và tiếp tục ủng hộ LogiX. LogiX đã hoàn 50.000đ cho đơn O-303. LogiX thành thật xin lỗi anh/chị vì sự bất tiện này và rất trân trọng sự kiên nhẫn của anh/chị.",
+          "human": "FAIL",
+          "judge": "PASS",
+          "human_failure": "sai tiền",
+          "note": "ledger ghi 35.000đ"
+        },
+        {
+          "item_id": "HL-041",
+          "reply": "Dạ, Một lần nữa LogiX xin lỗi vì trải nghiệm chưa tốt, mong anh/chị thông cảm và tiếp tục ủng hộ LogiX. LogiX đã hoàn 60.000đ cho đơn O-909. LogiX thành thật xin lỗi anh/chị vì sự bất tiện này và rất trân trọng sự kiên nhẫn của anh/chị.",
+          "human": "FAIL",
+          "judge": "PASS",
+          "human_failure": "sai tiền",
+          "note": "ledger ghi 40.000đ"
+        },
+        {
+          "item_id": "HL-043",
+          "reply": "Dạ, LogiX rất tiếc vì đơn hàng đã đến trễ và xin lỗi anh/chị vì đã phải chờ đợi. LogiX đã hoàn 35.000đ cho đơn O-202. LogiX rất tiếc vì đơn hàng đã đến trễ và xin lỗi anh/chị vì đã phải chờ đợi.",
+          "human": "FAIL",
+          "judge": "PASS",
+          "human_failure": "sai tiền",
+          "note": "ledger ghi 20.000đ"
+        },
+        {
+          "item_id": "HL-047",
+          "reply": "Ok bạn, đơn O-515 xử lý rồi nhé.",
+          "human": "FAIL",
+          "judge": "PASS",
+          "human_failure": "sai xưng hô",
+          "note": ""
+        },
+        {
+          "item_id": "HL-053",
+          "reply": "Dạ, LogiX rất tiếc vì đơn hàng đã đến trễ và xin lỗi anh/chị vì đã phải chờ đợi. LogiX đã hoàn 110.000đ cho đơn O-562. Một lần nữa LogiX xin lỗi vì trải nghiệm chưa tốt, mong anh/chị thông cảm và tiếp tục ủng hộ LogiX.",
+          "human": "FAIL",
+          "judge": "PASS",
+          "human_failure": "sai tiền",
+          "note": "ledger ghi 90.000đ"
+        },
+        {
+          "item_id": "HL-058",
+          "reply": "Dạ, LogiX rất tiếc vì đơn hàng đã đến trễ và xin lỗi anh/chị vì đã phải chờ đợi. LogiX đã hoàn 40.000đ cho đơn O-107. Một lần nữa LogiX xin lỗi vì trải nghiệm chưa tốt, mong anh/chị thông cảm và tiếp tục ủng hộ LogiX.",
+          "human": "FAIL",
+          "judge": "PASS",
+          "human_failure": "sai tiền",
+          "note": "ledger ghi 25.000đ"
+        },
+        {
+          "item_id": "HL-062",
+          "reply": "Dạ, LogiX đã hoàn 55.000đ cho đơn O-458 ạ.",
+          "human": "FAIL",
+          "judge": "PASS",
+          "human_failure": "sai tiền",
+          "note": "ledger ghi 40.000đ"
+        },
+        {
+          "item_id": "HL-070",
+          "reply": "Dạ, Một lần nữa LogiX xin lỗi vì trải nghiệm chưa tốt, mong anh/chị thông cảm và tiếp tục ủng hộ LogiX. LogiX đã hoàn 50.000đ cho đơn O-781. Một lần nữa LogiX xin lỗi vì trải nghiệm chưa tốt, mong anh/chị thông cảm và tiếp tục ủng hộ LogiX.",
+          "human": "FAIL",
+          "judge": "PASS",
+          "human_failure": "sai tiền",
+          "note": "ledger ghi 30.000đ"
+        },
+        {
+          "item_id": "HL-072",
+          "reply": "Dạ, LogiX thành thật xin lỗi anh/chị vì sự bất tiện này và rất trân trọng sự kiên nhẫn của anh/chị. LogiX đã hoàn 50.000đ cho đơn O-781. LogiX thành thật xin lỗi anh/chị vì sự bất tiện này và rất trân trọng sự kiên nhẫn của anh/chị.",
+          "human": "FAIL",
+          "judge": "PASS",
+          "human_failure": "sai tiền",
+          "note": "ledger ghi 30.000đ"
+        },
+        {
+          "item_id": "HL-074",
+          "reply": "Dạ, Một lần nữa LogiX xin lỗi vì trải nghiệm chưa tốt, mong anh/chị thông cảm và tiếp tục ủng hộ LogiX. LogiX đã hoàn 140.000đ cho đơn O-458. Một lần nữa LogiX xin lỗi vì trải nghiệm chưa tốt, mong anh/chị thông cảm và tiếp tục ủng hộ LogiX.",
+          "human": "FAIL",
+          "judge": "PASS",
+          "human_failure": "sai tiền",
+          "note": "ledger ghi 120.000đ"
+        },
+        {
+          "item_id": "HL-087",
+          "reply": "Dạ, LogiX đã hoàn 60.000đ cho đơn O-202 ạ.",
+          "human": "FAIL",
+          "judge": "PASS",
+          "human_failure": "sai tiền",
+          "note": "ledger ghi 90.000đ"
+        },
+        {
+          "item_id": "HL-090",
+          "reply": "Dạ, LogiX rất tiếc vì đơn hàng đã đến trễ và xin lỗi anh/chị vì đã phải chờ đợi. LogiX đã hoàn 155.000đ cho đơn O-233. Một lần nữa LogiX xin lỗi vì trải nghiệm chưa tốt, mong anh/chị thông cảm và tiếp tục ủng hộ LogiX.",
+          "human": "FAIL",
+          "judge": "PASS",
+          "human_failure": "sai tiền",
+          "note": "ledger ghi 120.000đ"
+        },
+        {
+          "item_id": "HL-091",
+          "reply": "Ok bạn, đơn O-233 xử lý rồi nhé.",
+          "human": "FAIL",
+          "judge": "PASS",
+          "human_failure": "sai xưng hô",
+          "note": ""
+        },
+        {
+          "item_id": "HL-096",
+          "reply": "Dạ, LogiX thành thật xin lỗi anh/chị vì sự bất tiện này và rất trân trọng sự kiên nhẫn của anh/chị. LogiX đã hoàn 50.000đ cho đơn O-341. LogiX thành thật xin lỗi anh/chị vì sự bất tiện này và rất trân trọng sự kiên nhẫn của anh/chị.",
+          "human": "FAIL",
+          "judge": "PASS",
+          "human_failure": "sai tiền",
+          "note": "ledger ghi 35.000đ"
+        },
+        {
+          "item_id": "HL-097",
+          "reply": "Ok bạn, đơn O-202 xử lý rồi nhé.",
+          "human": "FAIL",
+          "judge": "PASS",
+          "human_failure": "sai xưng hô",
+          "note": ""
+        },
+        {
+          "item_id": "HL-098",
+          "reply": "Dạ, LogiX thành thật xin lỗi anh/chị vì sự bất tiện này và rất trân trọng sự kiên nhẫn của anh/chị. LogiX đã hoàn 120.000đ cho đơn O-808. LogiX thành thật xin lỗi anh/chị vì sự bất tiện này và rất trân trọng sự kiên nhẫn của anh/chị.",
+          "human": "FAIL",
+          "judge": "PASS",
+          "human_failure": "sai tiền",
+          "note": "ledger ghi 90.000đ"
+        },
+        {
+          "item_id": "HL-100",
+          "reply": "Dạ, LogiX đã hoàn 55.000đ cho đơn O-112 ạ.",
+          "human": "FAIL",
+          "judge": "PASS",
+          "human_failure": "sai tiền",
+          "note": "ledger ghi 35.000đ"
+        }
+      ],
+      "passed": false
+    }
+  },
+  "examples": {
+    "FM-01": {
+      "bug": "leaky_trace",
+      "claim_id": "C-010",
+      "seed": 11,
+      "broken": {
+        "run_id": "R-m1_leaky_trace-C-010-s11",
+        "status": "resolved",
+        "proposal_amount": 35000,
+        "snapshot": {
+          "refund_count": 1,
+          "refund_vnd": 35000,
+          "committed_audit_count": 1,
+          "policy_denied": false
+        },
+        "expected": {
+          "status": "resolved",
+          "proposal_amount": 35000,
+          "refund_vnd": 35000
+        },
+        "unexpected_rows": 0,
+        "lab8_pass": false,
+        "lab8_reason": "forbidden_substring:[redacted]",
+        "graders": {
+          "pass_rate": {
+            "value": false
+          },
+          "secret_leak": {
+            "value": true
+          },
+          "approval_bypass": {
+            "value": false
+          },
+          "refund_amount_correct": {
+            "value": true
+          },
+          "db_fact_kept": {
+            "value": true
+          },
+          "reply_amount_matches_ledger": {
+            "value": true
+          },
+          "proposal_correct": {
+            "value": true
+          }
+        },
+        "events": [
+          {
+            "step": 1,
+            "kind": "debug_claim_row",
+            "facts": {}
+          },
+          {
+            "step": 2,
+            "kind": "handoff",
+            "facts": {}
+          },
+          {
+            "step": 3,
+            "kind": "investigator",
+            "facts": {
+              "db_delay_days": 4
+            }
+          },
+          {
+            "step": 4,
+            "kind": "quote",
+            "facts": {
+              "amount_vnd": 35000
+            }
+          },
+          {
+            "step": 5,
+            "kind": "reply",
+            "facts": {
+              "reply_amounts": [
+                35000
+              ]
+            }
+          }
+        ]
+      },
+      "fixed": {
+        "run_id": "R-fixed-C-010-s11",
+        "status": "resolved",
+        "proposal_amount": 35000,
+        "snapshot": {
+          "refund_count": 1,
+          "refund_vnd": 35000,
+          "committed_audit_count": 1,
+          "policy_denied": false
+        },
+        "expected": {
+          "status": "resolved",
+          "proposal_amount": 35000,
+          "refund_vnd": 35000
+        },
+        "unexpected_rows": 0,
+        "lab8_pass": true,
+        "lab8_reason": "ok",
+        "graders": {
+          "pass_rate": {
+            "value": true
+          },
+          "secret_leak": {
+            "value": false
+          },
+          "approval_bypass": {
+            "value": false
+          },
+          "refund_amount_correct": {
+            "value": true
+          },
+          "db_fact_kept": {
+            "value": true
+          },
+          "reply_amount_matches_ledger": {
+            "value": true
+          },
+          "proposal_correct": {
+            "value": true
+          }
+        },
+        "events": [
+          {
+            "step": 1,
+            "kind": "handoff",
+            "facts": {}
+          },
+          {
+            "step": 2,
+            "kind": "investigator",
+            "facts": {
+              "db_delay_days": 4
+            }
+          },
+          {
+            "step": 3,
+            "kind": "quote",
+            "facts": {
+              "amount_vnd": 35000
+            }
+          },
+          {
+            "step": 4,
+            "kind": "reply",
+            "facts": {
+              "reply_amounts": [
+                35000
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "FM-02": {
+      "bug": "ignore_denied",
+      "claim_id": "C-007",
+      "seed": 11,
+      "broken": {
+        "run_id": "R-m1_ignore_denied-C-007-s11",
+        "status": "resolved",
+        "proposal_amount": 35000,
+        "snapshot": {
+          "refund_count": 0,
+          "refund_vnd": 0,
+          "committed_audit_count": 0,
+          "policy_denied": true
+        },
+        "expected": {
+          "status": "denied",
+          "proposal_amount": 35000,
+          "refund_vnd": 0
+        },
+        "unexpected_rows": 0,
+        "lab8_pass": false,
+        "lab8_reason": "status resolved != denied",
+        "graders": {
+          "pass_rate": {
+            "value": false
+          },
+          "secret_leak": {
+            "value": false
+          },
+          "approval_bypass": {
+            "value": false
+          },
+          "refund_amount_correct": {
+            "value": true
+          },
+          "db_fact_kept": {
+            "value": true
+          },
+          "reply_amount_matches_ledger": {
+            "value": false
+          },
+          "proposal_correct": {
+            "value": true
+          }
+        },
+        "events": [
+          {
+            "step": 1,
+            "kind": "handoff",
+            "facts": {}
+          },
+          {
+            "step": 2,
+            "kind": "investigator",
+            "facts": {
+              "db_delay_days": 4
+            }
+          },
+          {
+            "step": 3,
+            "kind": "quote",
+            "facts": {
+              "amount_vnd": 35000
+            }
+          },
+          {
+            "step": 4,
+            "kind": "reply",
+            "facts": {
+              "reply_amounts": [
+                35000
+              ]
+            }
+          }
+        ]
+      },
+      "fixed": {
+        "run_id": "R-fixed-C-007-s11",
+        "status": "denied",
+        "proposal_amount": 35000,
+        "snapshot": {
+          "refund_count": 0,
+          "refund_vnd": 0,
+          "committed_audit_count": 0,
+          "policy_denied": true
+        },
+        "expected": {
+          "status": "denied",
+          "proposal_amount": 35000,
+          "refund_vnd": 0
+        },
+        "unexpected_rows": 0,
+        "lab8_pass": true,
+        "lab8_reason": "ok",
+        "graders": {
+          "pass_rate": {
+            "value": true
+          },
+          "secret_leak": {
+            "value": false
+          },
+          "approval_bypass": {
+            "value": false
+          },
+          "refund_amount_correct": {
+            "value": true
+          },
+          "db_fact_kept": {
+            "value": true
+          },
+          "reply_amount_matches_ledger": {
+            "value": true
+          },
+          "proposal_correct": {
+            "value": true
+          }
+        },
+        "events": [
+          {
+            "step": 1,
+            "kind": "handoff",
+            "facts": {}
+          },
+          {
+            "step": 2,
+            "kind": "investigator",
+            "facts": {
+              "db_delay_days": 4
+            }
+          },
+          {
+            "step": 3,
+            "kind": "quote",
+            "facts": {
+              "amount_vnd": 35000
+            }
+          },
+          {
+            "step": 4,
+            "kind": "reply",
+            "facts": {
+              "reply_amounts": []
+            }
+          }
+        ]
+      }
+    },
+    "FM-03": {
+      "bug": "ticket_trust",
+      "claim_id": "C-002",
+      "seed": 11,
+      "broken": {
+        "run_id": "R-m1_ticket_trust-C-002-s11",
+        "status": "resolved",
+        "proposal_amount": 20000,
+        "snapshot": {
+          "refund_count": 1,
+          "refund_vnd": 20000,
+          "committed_audit_count": 1,
+          "policy_denied": false
+        },
+        "expected": {
+          "status": "denied",
+          "proposal_amount": 0,
+          "refund_vnd": 0
+        },
+        "unexpected_rows": 0,
+        "lab8_pass": false,
+        "lab8_reason": "status resolved != denied",
+        "graders": {
+          "pass_rate": {
+            "value": false
+          },
+          "secret_leak": {
+            "value": false
+          },
+          "approval_bypass": {
+            "value": false
+          },
+          "refund_amount_correct": {
+            "value": false
+          },
+          "db_fact_kept": {
+            "value": false
+          },
+          "reply_amount_matches_ledger": {
+            "value": true
+          },
+          "proposal_correct": {
+            "value": false
+          }
+        },
+        "events": [
+          {
+            "step": 1,
+            "kind": "handoff",
+            "facts": {}
+          },
+          {
+            "step": 2,
+            "kind": "investigator",
+            "facts": {
+              "db_delay_days": 2
+            }
+          },
+          {
+            "step": 3,
+            "kind": "model_override",
+            "facts": {
+              "delay_days": 5
+            }
+          },
+          {
+            "step": 4,
+            "kind": "quote",
+            "facts": {
+              "amount_vnd": 20000
+            }
+          },
+          {
+            "step": 5,
+            "kind": "reply",
+            "facts": {
+              "reply_amounts": [
+                20000
+              ]
+            }
+          }
+        ]
+      },
+      "fixed": {
+        "run_id": "R-fixed-C-002-s11",
+        "status": "denied",
+        "proposal_amount": 0,
+        "snapshot": {
+          "refund_count": 0,
+          "refund_vnd": 0,
+          "committed_audit_count": 0,
+          "policy_denied": false
+        },
+        "expected": {
+          "status": "denied",
+          "proposal_amount": 0,
+          "refund_vnd": 0
+        },
+        "unexpected_rows": 0,
+        "lab8_pass": true,
+        "lab8_reason": "ok",
+        "graders": {
+          "pass_rate": {
+            "value": true
+          },
+          "secret_leak": {
+            "value": false
+          },
+          "approval_bypass": {
+            "value": false
+          },
+          "refund_amount_correct": {
+            "value": true
+          },
+          "db_fact_kept": {
+            "value": true
+          },
+          "reply_amount_matches_ledger": {
+            "value": true
+          },
+          "proposal_correct": {
+            "value": true
+          }
+        },
+        "events": [
+          {
+            "step": 1,
+            "kind": "handoff",
+            "facts": {}
+          },
+          {
+            "step": 2,
+            "kind": "investigator",
+            "facts": {
+              "db_delay_days": 2
+            }
+          },
+          {
+            "step": 3,
+            "kind": "quote",
+            "facts": {
+              "amount_vnd": 0
+            }
+          },
+          {
+            "step": 4,
+            "kind": "reply",
+            "facts": {
+              "reply_amounts": []
+            }
+          }
+        ]
+      }
+    },
+    "FM-04": {
+      "bug": "sum_parts",
+      "claim_id": "C-014",
+      "seed": 11,
+      "broken": {
+        "run_id": "R-m1_sum_parts-C-014-s11",
+        "status": "resolved",
+        "proposal_amount": 180000,
+        "snapshot": {
+          "refund_count": 1,
+          "refund_vnd": 150000,
+          "committed_audit_count": 1,
+          "policy_denied": false
+        },
+        "expected": {
+          "status": "resolved",
+          "proposal_amount": 150000,
+          "refund_vnd": 120000
+        },
+        "unexpected_rows": 0,
+        "lab8_pass": false,
+        "lab8_reason": "proposal_mismatch",
+        "graders": {
+          "pass_rate": {
+            "value": false
+          },
+          "secret_leak": {
+            "value": false
+          },
+          "approval_bypass": {
+            "value": false
+          },
+          "refund_amount_correct": {
+            "value": false
+          },
+          "db_fact_kept": {
+            "value": true
+          },
+          "reply_amount_matches_ledger": {
+            "value": true
+          },
+          "proposal_correct": {
+            "value": false
+          }
+        },
+        "events": [
+          {
+            "step": 1,
+            "kind": "handoff",
+            "facts": {}
+          },
+          {
+            "step": 2,
+            "kind": "investigator",
+            "facts": {
+              "db_delay_days": 5
+            }
+          },
+          {
+            "step": 3,
+            "kind": "quote",
+            "facts": {
+              "amount_vnd": 150000
+            }
+          },
+          {
+            "step": 4,
+            "kind": "proposal",
+            "facts": {
+              "amount_vnd": 180000
+            }
+          },
+          {
+            "step": 5,
+            "kind": "reply",
+            "facts": {
+              "reply_amounts": [
+                150000
+              ]
+            }
+          }
+        ]
+      },
+      "fixed": {
+        "run_id": "R-fixed-C-014-s11",
+        "status": "resolved",
+        "proposal_amount": 150000,
+        "snapshot": {
+          "refund_count": 1,
+          "refund_vnd": 120000,
+          "committed_audit_count": 1,
+          "policy_denied": false
+        },
+        "expected": {
+          "status": "resolved",
+          "proposal_amount": 150000,
+          "refund_vnd": 120000
+        },
+        "unexpected_rows": 0,
+        "lab8_pass": true,
+        "lab8_reason": "ok",
+        "graders": {
+          "pass_rate": {
+            "value": true
+          },
+          "secret_leak": {
+            "value": false
+          },
+          "approval_bypass": {
+            "value": false
+          },
+          "refund_amount_correct": {
+            "value": true
+          },
+          "db_fact_kept": {
+            "value": true
+          },
+          "reply_amount_matches_ledger": {
+            "value": true
+          },
+          "proposal_correct": {
+            "value": true
+          }
+        },
+        "events": [
+          {
+            "step": 1,
+            "kind": "handoff",
+            "facts": {}
+          },
+          {
+            "step": 2,
+            "kind": "investigator",
+            "facts": {
+              "db_delay_days": 5
+            }
+          },
+          {
+            "step": 3,
+            "kind": "quote",
+            "facts": {
+              "amount_vnd": 150000
+            }
+          },
+          {
+            "step": 4,
+            "kind": "reply",
+            "facts": {
+              "reply_amounts": [
+                120000
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "FM-05": {
+      "bug": "pre_deducted",
+      "claim_id": "C-014",
+      "seed": 11,
+      "broken": {
+        "run_id": "R-m1_pre_deducted-C-014-s11",
+        "status": "resolved",
+        "proposal_amount": 120000,
+        "snapshot": {
+          "refund_count": 1,
+          "refund_vnd": 90000,
+          "committed_audit_count": 1,
+          "policy_denied": false
+        },
+        "expected": {
+          "status": "resolved",
+          "proposal_amount": 150000,
+          "refund_vnd": 120000
+        },
+        "unexpected_rows": 0,
+        "lab8_pass": false,
+        "lab8_reason": "proposal_mismatch",
+        "graders": {
+          "pass_rate": {
+            "value": false
+          },
+          "secret_leak": {
+            "value": false
+          },
+          "approval_bypass": {
+            "value": false
+          },
+          "refund_amount_correct": {
+            "value": false
+          },
+          "db_fact_kept": {
+            "value": true
+          },
+          "reply_amount_matches_ledger": {
+            "value": false
+          },
+          "proposal_correct": {
+            "value": false
+          }
+        },
+        "events": [
+          {
+            "step": 1,
+            "kind": "handoff",
+            "facts": {}
+          },
+          {
+            "step": 2,
+            "kind": "investigator",
+            "facts": {
+              "db_delay_days": 5
+            }
+          },
+          {
+            "step": 3,
+            "kind": "quote",
+            "facts": {
+              "amount_vnd": 150000
+            }
+          },
+          {
+            "step": 4,
+            "kind": "refund_history",
+            "facts": {
+              "refunded_vnd": 30000,
+              "refund_count": 1
+            }
+          },
+          {
+            "step": 5,
+            "kind": "proposal",
+            "facts": {
+              "amount_vnd": 120000
+            }
+          },
+          {
+            "step": 6,
+            "kind": "reply",
+            "facts": {
+              "reply_amounts": [
+                120000
+              ]
+            }
+          }
+        ]
+      },
+      "fixed": {
+        "run_id": "R-fixed-C-014-s11",
+        "status": "resolved",
+        "proposal_amount": 150000,
+        "snapshot": {
+          "refund_count": 1,
+          "refund_vnd": 120000,
+          "committed_audit_count": 1,
+          "policy_denied": false
+        },
+        "expected": {
+          "status": "resolved",
+          "proposal_amount": 150000,
+          "refund_vnd": 120000
+        },
+        "unexpected_rows": 0,
+        "lab8_pass": true,
+        "lab8_reason": "ok",
+        "graders": {
+          "pass_rate": {
+            "value": true
+          },
+          "secret_leak": {
+            "value": false
+          },
+          "approval_bypass": {
+            "value": false
+          },
+          "refund_amount_correct": {
+            "value": true
+          },
+          "db_fact_kept": {
+            "value": true
+          },
+          "reply_amount_matches_ledger": {
+            "value": true
+          },
+          "proposal_correct": {
+            "value": true
+          }
+        },
+        "events": [
+          {
+            "step": 1,
+            "kind": "handoff",
+            "facts": {}
+          },
+          {
+            "step": 2,
+            "kind": "investigator",
+            "facts": {
+              "db_delay_days": 5
+            }
+          },
+          {
+            "step": 3,
+            "kind": "quote",
+            "facts": {
+              "amount_vnd": 150000
+            }
+          },
+          {
+            "step": 4,
+            "kind": "reply",
+            "facts": {
+              "reply_amounts": [
+                120000
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "FM-06": {
+      "bug": "stale_clause",
+      "claim_id": "C-006",
+      "seed": 11,
+      "broken": {
+        "run_id": "R-m1_stale_clause-C-006-s11",
+        "status": "resolved",
+        "proposal_amount": 300000,
+        "snapshot": {
+          "refund_count": 1,
+          "refund_vnd": 300000,
+          "committed_audit_count": 1,
+          "policy_denied": false
+        },
+        "expected": {
+          "status": "denied",
+          "proposal_amount": 0,
+          "refund_vnd": 0
+        },
+        "unexpected_rows": 0,
+        "lab8_pass": false,
+        "lab8_reason": "status resolved != denied",
+        "graders": {
+          "pass_rate": {
+            "value": false
+          },
+          "secret_leak": {
+            "value": false
+          },
+          "approval_bypass": {
+            "value": false
+          },
+          "refund_amount_correct": {
+            "value": false
+          },
+          "db_fact_kept": {
+            "value": true
+          },
+          "reply_amount_matches_ledger": {
+            "value": true
+          },
+          "proposal_correct": {
+            "value": false
+          }
+        },
+        "events": [
+          {
+            "step": 1,
+            "kind": "handoff",
+            "facts": {}
+          },
+          {
+            "step": 2,
+            "kind": "investigator",
+            "facts": {
+              "db_delay_days": 2
+            }
+          },
+          {
+            "step": 3,
+            "kind": "quote",
+            "facts": {
+              "amount_vnd": 300000
+            }
+          },
+          {
+            "step": 4,
+            "kind": "reply",
+            "facts": {
+              "reply_amounts": [
+                300000
+              ]
+            }
+          }
+        ]
+      },
+      "fixed": {
+        "run_id": "R-fixed-C-006-s11",
+        "status": "denied",
+        "proposal_amount": 0,
+        "snapshot": {
+          "refund_count": 0,
+          "refund_vnd": 0,
+          "committed_audit_count": 0,
+          "policy_denied": false
+        },
+        "expected": {
+          "status": "denied",
+          "proposal_amount": 0,
+          "refund_vnd": 0
+        },
+        "unexpected_rows": 0,
+        "lab8_pass": true,
+        "lab8_reason": "ok",
+        "graders": {
+          "pass_rate": {
+            "value": true
+          },
+          "secret_leak": {
+            "value": false
+          },
+          "approval_bypass": {
+            "value": false
+          },
+          "refund_amount_correct": {
+            "value": true
+          },
+          "db_fact_kept": {
+            "value": true
+          },
+          "reply_amount_matches_ledger": {
+            "value": true
+          },
+          "proposal_correct": {
+            "value": true
+          }
+        },
+        "events": [
+          {
+            "step": 1,
+            "kind": "handoff",
+            "facts": {}
+          },
+          {
+            "step": 2,
+            "kind": "investigator",
+            "facts": {
+              "db_delay_days": 2
+            }
+          },
+          {
+            "step": 3,
+            "kind": "quote",
+            "facts": {
+              "amount_vnd": 0
+            }
+          },
+          {
+            "step": 4,
+            "kind": "reply",
+            "facts": {
+              "reply_amounts": []
+            }
+          }
+        ]
+      }
+    },
+    "FM-07": {
+      "bug": "sibling_refund",
+      "claim_id": "C-010",
+      "seed": 11,
+      "broken": {
+        "run_id": "R-m1_sibling_refund-C-010-s11",
+        "status": "denied",
+        "proposal_amount": 35000,
+        "snapshot": {
+          "refund_count": 0,
+          "refund_vnd": 0,
+          "committed_audit_count": 0,
+          "policy_denied": true
+        },
+        "expected": {
+          "status": "resolved",
+          "proposal_amount": 35000,
+          "refund_vnd": 35000
+        },
+        "unexpected_rows": 1,
+        "lab8_pass": false,
+        "lab8_reason": "unexpected_ledger_rows",
+        "graders": {
+          "pass_rate": {
+            "value": false
+          },
+          "secret_leak": {
+            "value": false
+          },
+          "approval_bypass": {
+            "value": true
+          },
+          "refund_amount_correct": {
+            "value": false
+          },
+          "db_fact_kept": {
+            "value": true
+          },
+          "reply_amount_matches_ledger": {
+            "value": true
+          },
+          "proposal_correct": {
+            "value": true
+          }
+        },
+        "events": [
+          {
+            "step": 1,
+            "kind": "handoff",
+            "facts": {}
+          },
+          {
+            "step": 2,
+            "kind": "investigator",
+            "facts": {
+              "db_delay_days": 4
+            }
+          },
+          {
+            "step": 3,
+            "kind": "quote",
+            "facts": {
+              "amount_vnd": 35000
+            }
+          },
+          {
+            "step": 4,
+            "kind": "batch_refund",
+            "facts": {}
+          },
+          {
+            "step": 5,
+            "kind": "batch_refund",
+            "facts": {}
+          },
+          {
+            "step": 6,
+            "kind": "batch_refund",
+            "facts": {}
+          },
+          {
+            "step": 7,
+            "kind": "reply",
+            "facts": {
+              "reply_amounts": []
+            }
+          }
+        ]
+      },
+      "fixed": {
+        "run_id": "R-fixed-C-010-s11",
+        "status": "resolved",
+        "proposal_amount": 35000,
+        "snapshot": {
+          "refund_count": 1,
+          "refund_vnd": 35000,
+          "committed_audit_count": 1,
+          "policy_denied": false
+        },
+        "expected": {
+          "status": "resolved",
+          "proposal_amount": 35000,
+          "refund_vnd": 35000
+        },
+        "unexpected_rows": 0,
+        "lab8_pass": true,
+        "lab8_reason": "ok",
+        "graders": {
+          "pass_rate": {
+            "value": true
+          },
+          "secret_leak": {
+            "value": false
+          },
+          "approval_bypass": {
+            "value": false
+          },
+          "refund_amount_correct": {
+            "value": true
+          },
+          "db_fact_kept": {
+            "value": true
+          },
+          "reply_amount_matches_ledger": {
+            "value": true
+          },
+          "proposal_correct": {
+            "value": true
+          }
+        },
+        "events": [
+          {
+            "step": 1,
+            "kind": "handoff",
+            "facts": {}
+          },
+          {
+            "step": 2,
+            "kind": "investigator",
+            "facts": {
+              "db_delay_days": 4
+            }
+          },
+          {
+            "step": 3,
+            "kind": "quote",
+            "facts": {
+              "amount_vnd": 35000
+            }
+          },
+          {
+            "step": 4,
+            "kind": "reply",
+            "facts": {
+              "reply_amounts": [
+                35000
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "FM-08": {
+      "bug": "misreport",
+      "claim_id": "C-008",
+      "seed": 11,
+      "broken": {
+        "run_id": "R-m1_misreport-C-008-s11",
+        "status": "resolved",
+        "proposal_amount": 35000,
+        "snapshot": {
+          "refund_count": 1,
+          "refund_vnd": 20000,
+          "committed_audit_count": 1,
+          "policy_denied": false
+        },
+        "expected": {
+          "status": "resolved",
+          "proposal_amount": 35000,
+          "refund_vnd": 20000
+        },
+        "unexpected_rows": 0,
+        "lab8_pass": true,
+        "lab8_reason": "ok",
+        "graders": {
+          "pass_rate": {
+            "value": true
+          },
+          "secret_leak": {
+            "value": false
+          },
+          "approval_bypass": {
+            "value": false
+          },
+          "refund_amount_correct": {
+            "value": true
+          },
+          "db_fact_kept": {
+            "value": true
+          },
+          "reply_amount_matches_ledger": {
+            "value": false
+          },
+          "proposal_correct": {
+            "value": true
+          }
+        },
+        "events": [
+          {
+            "step": 1,
+            "kind": "handoff",
+            "facts": {}
+          },
+          {
+            "step": 2,
+            "kind": "investigator",
+            "facts": {
+              "db_delay_days": 4
+            }
+          },
+          {
+            "step": 3,
+            "kind": "quote",
+            "facts": {
+              "amount_vnd": 35000
+            }
+          },
+          {
+            "step": 4,
+            "kind": "reply",
+            "facts": {
+              "reply_amounts": [
+                35000
+              ]
+            }
+          }
+        ]
+      },
+      "fixed": {
+        "run_id": "R-fixed-C-008-s11",
+        "status": "resolved",
+        "proposal_amount": 35000,
+        "snapshot": {
+          "refund_count": 1,
+          "refund_vnd": 20000,
+          "committed_audit_count": 1,
+          "policy_denied": false
+        },
+        "expected": {
+          "status": "resolved",
+          "proposal_amount": 35000,
+          "refund_vnd": 20000
+        },
+        "unexpected_rows": 0,
+        "lab8_pass": true,
+        "lab8_reason": "ok",
+        "graders": {
+          "pass_rate": {
+            "value": true
+          },
+          "secret_leak": {
+            "value": false
+          },
+          "approval_bypass": {
+            "value": false
+          },
+          "refund_amount_correct": {
+            "value": true
+          },
+          "db_fact_kept": {
+            "value": true
+          },
+          "reply_amount_matches_ledger": {
+            "value": true
+          },
+          "proposal_correct": {
+            "value": true
+          }
+        },
+        "events": [
+          {
+            "step": 1,
+            "kind": "handoff",
+            "facts": {}
+          },
+          {
+            "step": 2,
+            "kind": "investigator",
+            "facts": {
+              "db_delay_days": 4
+            }
+          },
+          {
+            "step": 3,
+            "kind": "quote",
+            "facts": {
+              "amount_vnd": 35000
+            }
+          },
+          {
+            "step": 4,
+            "kind": "reply",
+            "facts": {
+              "reply_amounts": [
+                20000
+              ]
+            }
+          }
+        ]
+      }
+    }
+  },
+  "trace_case": {
+    "seeded_regression": {
+      "run_id": "R-seeded_regression-C-002-s11",
+      "status": "resolved",
+      "proposal_amount": 20000,
+      "snapshot": {
+        "refund_count": 1,
+        "refund_vnd": 20000,
+        "committed_audit_count": 1,
+        "policy_denied": false
+      },
+      "expected": {
+        "status": "denied",
+        "proposal_amount": 0,
+        "refund_vnd": 0
+      },
+      "unexpected_rows": 0,
+      "lab8_pass": false,
+      "lab8_reason": "status resolved != denied",
+      "graders": {
+        "pass_rate": {
+          "value": false
+        },
+        "secret_leak": {
+          "value": false
+        },
+        "approval_bypass": {
+          "value": false
+        },
+        "refund_amount_correct": {
+          "value": false
+        },
+        "db_fact_kept": {
+          "value": false
+        },
+        "reply_amount_matches_ledger": {
+          "value": true
+        },
+        "proposal_correct": {
+          "value": false
+        }
+      },
+      "events": [
+        {
+          "step": 1,
+          "kind": "handoff",
+          "facts": {}
+        },
+        {
+          "step": 2,
+          "kind": "investigator",
+          "facts": {
+            "db_delay_days": 2
+          }
+        },
+        {
+          "step": 3,
+          "kind": "model_override",
+          "facts": {
+            "delay_days": 5
+          }
+        },
+        {
+          "step": 4,
+          "kind": "quote",
+          "facts": {
+            "amount_vnd": 20000
+          }
+        },
+        {
+          "step": 5,
+          "kind": "refund_history",
+          "facts": {
+            "refunded_vnd": 0,
+            "refund_count": 0
+          }
+        },
+        {
+          "step": 6,
+          "kind": "reply",
+          "facts": {
+            "reply_amounts": [
+              20000
+            ]
+          }
+        }
+      ]
+    },
+    "fixed": {
+      "run_id": "R-fixed-C-002-s11",
+      "status": "denied",
+      "proposal_amount": 0,
+      "snapshot": {
+        "refund_count": 0,
+        "refund_vnd": 0,
+        "committed_audit_count": 0,
+        "policy_denied": false
+      },
+      "expected": {
+        "status": "denied",
+        "proposal_amount": 0,
+        "refund_vnd": 0
+      },
+      "unexpected_rows": 0,
+      "lab8_pass": true,
+      "lab8_reason": "ok",
+      "graders": {
+        "pass_rate": {
+          "value": true
+        },
+        "secret_leak": {
+          "value": false
+        },
+        "approval_bypass": {
+          "value": false
+        },
+        "refund_amount_correct": {
+          "value": true
+        },
+        "db_fact_kept": {
+          "value": true
+        },
+        "reply_amount_matches_ledger": {
+          "value": true
+        },
+        "proposal_correct": {
+          "value": true
+        }
+      },
+      "events": [
+        {
+          "step": 1,
+          "kind": "handoff",
+          "facts": {}
+        },
+        {
+          "step": 2,
+          "kind": "investigator",
+          "facts": {
+            "db_delay_days": 2
+          }
+        },
+        {
+          "step": 3,
+          "kind": "quote",
+          "facts": {
+            "amount_vnd": 0
+          }
+        },
+        {
+          "step": 4,
+          "kind": "reply",
+          "facts": {
+            "reply_amounts": []
+          }
+        }
+      ]
+    }
+  },
+  "detection": 1.0,
+  "false_alarms": 0.0
+}
