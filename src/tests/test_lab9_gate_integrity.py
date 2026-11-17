@@ -5,13 +5,20 @@ import json
 
 import pytest
 
-from lab9 import gate, stats
+from lab9 import stats
 
 pytestmark = pytest.mark.student
 SPEC = {"eval_set_version": "v2", "metrics": [
     {"id": "pass_rate", "kind": "capability", "blocking": True, "threshold": {"min": 0.8}}],
     "slices": [{"name": "money_movement", "metric": "pass_rate", "min": 0.8,
                 "blocking": True, "no_significant_drop": True}]}
+
+
+@pytest.fixture(scope="module")
+def gate():
+    # Import after selection: Lab8 host CI intentionally lacks pydantic-evals.
+    from lab9 import gate
+    return gate
 
 
 def report():
@@ -23,7 +30,7 @@ def report():
 
 @pytest.mark.parametrize("attack", ["duplicate", "null_score", "failures_on_green", "retag",
                                    "cherry_pick", "edited_summary", "inf", "null_metric"])
-def test_lab9_integrity_rejects_gamed_report(attack):
+def test_lab9_integrity_rejects_gamed_report(attack, gate):
     base, pr = report(), report()
     if attack == "duplicate":
         pr["rows"][-1] = copy.deepcopy(pr["rows"][0])
@@ -48,7 +55,7 @@ def test_lab9_integrity_rejects_gamed_report(attack):
 
 
 @pytest.mark.parametrize("attack", ["remove_metric", "disable", "remove_ci", "remove_slice", "lower_floor"])
-def test_lab9_ratchet_preserves_existing_guards(attack):
+def test_lab9_ratchet_preserves_existing_guards(attack, gate):
     loose = copy.deepcopy(SPEC)
     if attack == "remove_metric":
         loose["metrics"] = []
@@ -63,7 +70,7 @@ def test_lab9_ratchet_preserves_existing_guards(attack):
     assert gate.integrity_check(report(), report(), loose, SPEC)
 
 
-def test_lab9_self_comparison_and_tighter_spec_are_valid():
+def test_lab9_self_comparison_and_tighter_spec_are_valid(gate):
     tight = copy.deepcopy(SPEC)
     tight["metrics"][0]["threshold"]["min"] = 0.9
     assert gate.check(report(), report(), tight, SPEC)[0] == []
