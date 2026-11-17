@@ -46,7 +46,9 @@ def test_lab9_missing_reply_is_not_success_for_resolved_variant(graders):
     assert graders.ReplyAmountMatchesLedger().evaluate(SimpleNamespace(output=trial)).value is False
 
 
-def test_lab9_legacy_swarm_reply_is_explicitly_not_applicable(graders):
+def test_lab9_legacy_reply_is_explicitly_not_applicable(graders):
+    # Keep "swarm" out of the test name: inherited Lab8 CI selects -k swarm
+    # with only Lab8 dependencies. The full Lab9 job still runs this test.
     trial = {"events": [], "snapshot": {"refund_vnd": 20000},
              "result": {"status": "resolved", "shape": "swarm"}}
     result = graders.ReplyAmountMatchesLedger().evaluate(SimpleNamespace(output=trial))
